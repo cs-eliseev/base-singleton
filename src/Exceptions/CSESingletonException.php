@@ -18,7 +18,7 @@ class CSESingletonException extends CseExceptions
     /**
      * @var array
      */
-    private static $errorsMsg = [
+    protected static $errorsMsg = [
         self::ERROR_SINGLETON_CLONE => 'Singleton can not using clone',
         self::ERROR_SINGLETON_SLEEP => 'Singleton can not serialize',
         self::ERROR_SINGLETON_WAKEUP => 'Singleton can not deserialize ',
