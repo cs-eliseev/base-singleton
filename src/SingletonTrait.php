@@ -44,4 +44,12 @@ trait SingletonTrait
     {
         CSESingletonException::throwException(CSESingletonException::ERROR_SINGLETON_CLONE);
     }
+
+    /**
+     * @throws CSESingletonException
+     */
+    final public function __sleep()
+    {
+        CSESingletonException::throwException(CSESingletonException::ERROR_SINGLETON_SLEEP);
+    }
 }
