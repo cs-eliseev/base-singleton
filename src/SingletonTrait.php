@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace cse\based\traits;
+namespace cse\base;
 
 use cse\base\Exceptions\CSESingletonException;
 

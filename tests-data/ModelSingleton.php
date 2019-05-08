@@ -1,8 +1,8 @@
 <?php
 
-use cse\based\traits\SingletonTrait;
-
 require_once __DIR__ . '/../autoload.php';
+
+use cse\base\SingletonTrait;
 
 /**
  * Class ModelSingleton
