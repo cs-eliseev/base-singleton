@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace cse\based\traits;
 
+use cse\helpers\Exceptions\CSESingletonException;
+
 /**
  * Class SingletonTrait
  *
@@ -33,5 +35,13 @@ trait SingletonTrait
         }
 
         return self::$instance[$instanceKey];
+    }
+
+    /**
+     * @throws CSESingletonException
+     */
+    final public function __clone()
+    {
+        CSESingletonException::throwException(CSESingletonException::ERROR_SINGLETON_CLONE);
     }
 }
