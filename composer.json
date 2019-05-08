@@ -1,0 +1,32 @@
+{
+  "name": "cse/base-singleton",
+  "description": "A Singleton Design Pattern which allow easy used class.",
+  "keywords": ["singleton", "pattern", "cse", "collection", "collections", "tool", "tools", "utilities", "utils", "utility", "helper", "helpers", "library", "framework"],
+  "homepage": "https://github.com/cs-eliseev/base-singleton",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eliseev Alexey",
+      "email": "a.k.eliseev@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "cse/base-exceptions": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "cse\\base\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "": "tests/"
+    }
+  }
+}
