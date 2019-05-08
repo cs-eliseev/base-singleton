@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace cse\based\traits;
 
-use cse\helpers\Exceptions\CSESingletonException;
+use cse\base\Exceptions\CSESingletonException;
 
 /**
  * Class SingletonTrait
@@ -51,5 +51,13 @@ trait SingletonTrait
     final public function __sleep()
     {
         CSESingletonException::throwException(CSESingletonException::ERROR_SINGLETON_SLEEP);
+    }
+
+    /**
+     * @throws CSESingletonException
+     */
+    final public function __wakeup()
+    {
+        CSESingletonException::throwException(CSESingletonException::ERROR_SINGLETON_WAKEUP);
     }
 }
