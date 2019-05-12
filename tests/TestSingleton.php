@@ -60,4 +60,33 @@ class TestSingleton extends TestCase
             [Throwable::class],
         ];
     }
+
+    /**
+     * @param $class
+     *
+     * @throws CSESingletonException
+     *
+     * @dataProvider providerSleep
+     *
+     * @runInSeparateProcess
+     */
+    public function testSleep($class): void
+    {
+        $this->expectException($class);
+
+        $serialize = serialize(ModelSingleton::getInstance());
+    }
+
+    /**
+     * @return array
+     */
+    public function providerSleep(): array
+    {
+        return [
+            [CSESingletonException::class],
+            [CseExceptions::class],
+            [Exception::class],
+            [Throwable::class],
+        ];
+    }
 }
