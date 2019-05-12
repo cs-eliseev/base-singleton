@@ -32,3 +32,11 @@ try {
 } catch (CSESingletonException $e) {
     var_dump($label . $e->getMessage());
 }
+
+// Example: __sleep exception
+$label = 'Serialize instance exception: ';
+try {
+    $serialize = serialize($instance3);
+} catch (CSESingletonException $e) {
+    var_dump($label . $e->getMessage());
+}
