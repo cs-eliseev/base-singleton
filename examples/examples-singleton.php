@@ -11,3 +11,9 @@ $label = 'Create default instance: ';
 $instance = ModelSingleton::getInstance();
 $instance->setParam(10);
 var_dump($label . $instance->getParam());
+
+$label = 'Create new instance by name: ';
+// Create new instance by name
+$instance2 = ModelSingleton::getInstance('inst');
+$instance2->setParam(20);
+var_dump($label . $instance->getParam());
