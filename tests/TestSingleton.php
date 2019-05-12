@@ -2,6 +2,8 @@
 
 require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'tests-data' . DIRECTORY_SEPARATOR . 'ModelSingleton.php';
 
+use cse\base\CseExceptions;
+use cse\base\Exceptions\CSESingletonException;
 use PHPUnit\Framework\TestCase;
 
 class TestSingleton extends TestCase
@@ -28,5 +30,34 @@ class TestSingleton extends TestCase
         $this->assertEquals($test3, $instance->getParam());
         $this->assertEquals($test2, $instance2->getParam());
         $this->assertEquals($test3, $instance3->getParam());
+    }
+
+    /**
+     * @param $class
+     *
+     * @throws CSESingletonException
+     *
+     * @dataProvider providerClone
+     *
+     * @runInSeparateProcess
+     */
+    public function testClone($class): void
+    {
+        $this->expectException($class);
+
+        $clone = clone ModelSingleton::getInstance();
+    }
+
+    /**
+     * @return array
+     */
+    public function providerClone(): array
+    {
+        return [
+            [CSESingletonException::class],
+            [CseExceptions::class],
+            [Exception::class],
+            [Throwable::class],
+        ];
     }
 }
