@@ -24,3 +24,11 @@ $instance3 = ModelSingleton::getInstance();
 $instance3->setParam(30);
 var_dump($label . $instance->getParam());
 var_dump($label . $instance2->getParam());
+
+// Example: __clone exception
+$label = 'Clone exception: ';
+try {
+    $instance4 = clone $instance3;
+} catch (CSESingletonException $e) {
+    var_dump($label . $e->getMessage());
+}
