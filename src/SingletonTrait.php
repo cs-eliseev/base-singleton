@@ -20,7 +20,7 @@ trait SingletonTrait
      *
      * @return SingletonTrait
      *
-     * @throws \ReflectionException
+     * @throws CSESingletonException
      */
     public static function getInstance(string $instanceKey = ''): self
     {

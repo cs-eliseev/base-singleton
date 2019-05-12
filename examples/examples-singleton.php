@@ -14,7 +14,7 @@ var_dump($label . $instance->getParam());
 
 $label = 'Create new instance by name: ';
 // Create new instance by name
-$instance2 = ModelSingleton::getInstance('inst');
+$instance2 = ModelSingleton::getInstance('new');
 $instance2->setParam(20);
 var_dump($label . $instance->getParam());
 
@@ -28,7 +28,7 @@ var_dump($label . $instance2->getParam());
 // Example: __clone exception
 $label = 'Clone exception: ';
 try {
-    $instance4 = clone $instance3;
+    $clone = clone $instance3;
 } catch (CSESingletonException $e) {
     var_dump($label . $e->getMessage());
 }
