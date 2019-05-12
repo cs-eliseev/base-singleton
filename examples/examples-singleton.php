@@ -17,3 +17,10 @@ $label = 'Create new instance by name: ';
 $instance2 = ModelSingleton::getInstance('inst');
 $instance2->setParam(20);
 var_dump($label . $instance->getParam());
+
+$label = 'Restore instance: ';
+// Create new instance by name
+$instance3 = ModelSingleton::getInstance();
+$instance3->setParam(30);
+var_dump($label . $instance->getParam());
+var_dump($label . $instance2->getParam());
