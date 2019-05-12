@@ -1,6 +1,6 @@
 {
   "name": "cse/base-singleton",
-  "description": "A Singleton Design Pattern which allow easy used class.",
+  "description": "A Singleton Design Pattern which allow easy used singleton class.",
   "keywords": ["singleton", "pattern", "cse", "collection", "collections", "tool", "tools", "utilities", "utils", "utility", "helper", "helpers", "library", "framework"],
   "homepage": "https://github.com/cs-eliseev/base-singleton",
   "type": "library",

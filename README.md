@@ -9,10 +9,10 @@ SINGLETON CSE BASE
 
 [![Packagist](https://img.shields.io/packagist/v/cse/base-singleton.svg?style=flat-square)](https://packagist.org/packages/cse/base-singleton)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1-8892BF.svg?style=flat-square)](https://packagist.org/packages/cse/base-singleton)
-[![Packagist](https://img.shields.io/packagist/l/cse/base-singleton.svg?style=popout-square)](https://github.com/cs-eliseev/base-singleton/blob/master/LICENSE.md)
+[![Packagist](https://img.shields.io/packagist/l/cse/base-singleton.svg?style=flat-square)](https://github.com/cs-eliseev/base-singleton/blob/master/LICENSE.md)
 [![GitHub repo size](https://img.shields.io/github/repo-size/cs-eliseev/base-singleton.svg?style=flat-square)](https://github.com/cs-eliseev/base-singleton/archive/master.zip)
 
-A Singleton Design Pattern which allow easy used class.
+A Singleton Design Pattern which allow easy used singleton class.
 
 Project repository: https://github.com/cs-eliseev/base-singleton
 
@@ -35,7 +35,7 @@ $instanceName = ExampleSingleton::getInstance('instance_name');
 CSE BASE is a set of libraries written in PHP specifically to extend your classes.
 
 A set of basic methods for creating your classes is what you need to quickly create web applications. 
-SINGLETON CSE BASE, allow easy create singleton class.
+SINGLETON CSE BASE, позволяет легко и просто создавать singleton класс.
 
 CSE BASE was created for the rapid development of web applications.
 
@@ -112,7 +112,7 @@ class ModelSingleton
 }
 ```
 
-**Create instance**
+**Create INSTANCE singleton**
 
 Examples:
 ```php
@@ -122,7 +122,7 @@ $instance->getParam();
 // 10
 ```
 
-Create instance by name:
+Create singleton instance by name:
 ```php
 $instance2 = ModelSingleton::getInstance('new');
 $instance2->setParam(20);
@@ -132,7 +132,7 @@ $instance2->getParam();
 // 20
 ```
 
-Restore instance:
+Restore singleton instance:
 ```php
 $instance3 = ModelSingleton::getInstance();
 $instance3->setParam(30);
@@ -144,7 +144,7 @@ $instance3->getParam();
 // 30
 ```
 
-**EXCEPTIONS**
+**EXCEPTIONS singleton**
 
 __CLONE:
 ```php
